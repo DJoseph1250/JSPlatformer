@@ -26,3 +26,7 @@ function Level(plan) {
 	})[0];
 	this.status = this.finishDelay = null;
 }
+
+Level.prototype.isFinished = function(first_argument) {
+	return this.status != null && this.finishDelay < 0;
+};
